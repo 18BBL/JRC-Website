@@ -1095,13 +1095,10 @@ select option { background: var(--white); color: var(--ink); }
 
 .customers-header {
   padding: 0 88px;
-  margin-bottom: 52px;
-  display: flex;
-  align-items: flex-end;
-  gap: 24px;
+  margin-bottom: 48px;
 }
 
-.customers-header .section-label { margin-bottom: 0; }
+.customers-header .section-label { margin-bottom: 8px; }
 
 .customers-track-wrap {
   position: relative;
@@ -1712,6 +1709,115 @@ footer {
 }
 
 /* ─── RESPONSIVE ─── */
+/* ─── OUR PRODUCTION SECTION ─── */
+.production-section {
+  background: var(--near-black);
+  padding: 100px 88px;
+}
+.production-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.production-header {
+  margin-bottom: 64px;
+}
+.production-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(42px, 6vw, 72px);
+  text-transform: uppercase;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 18px;
+  margin-top: 12px;
+}
+.production-sub {
+  font-family: 'Crimson Pro', serif;
+  font-size: 19px;
+  font-style: italic;
+  font-weight: 300;
+  color: rgba(250,247,242,0.5);
+  max-width: 560px;
+  line-height: 1.65;
+}
+.production-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+.prod-point {
+  background: rgba(255,255,255,0.04);
+  border-top: 2px solid rgba(192,57,43,0.25);
+  padding: 40px 32px;
+  transition: background 0.3s, border-color 0.3s;
+}
+.prod-point:hover {
+  background: rgba(192,57,43,0.07);
+  border-top-color: var(--crimson);
+}
+.prod-point-icon {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 52px;
+  color: rgba(192,57,43,0.2);
+  line-height: 1;
+  margin-bottom: 18px;
+}
+.prod-point-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--white);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+.prod-point-desc {
+  font-family: 'Crimson Pro', serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(250,247,242,0.5);
+  font-weight: 300;
+}
+
+/* ─── CLIENTS TITLE ─── */
+.clients-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(28px, 3.5vw, 44px);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  line-height: 1;
+  margin-top: 10px;
+}
+
+/* ─── LOGO HOVER BRIGHTNESS ─── */
+.customer-img img {
+  transition: filter 0.25s, opacity 0.25s;
+}
+.customer-card:hover .customer-img img {
+  filter: brightness(1.08);
+}
+.rest-img img {
+  transition: filter 0.25s;
+}
+.rest-card:hover .rest-img img {
+  filter: brightness(1.08);
+}
+
+/* ─── FOOTER ADDRESS ─── */
+.footer-address {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(250,247,242,0.28);
+  margin-top: 8px;
+}
+
 @media (max-width: 900px) {
   nav { padding: 0 24px; }
   .nav-logo-name { display: none; }
@@ -1723,6 +1829,8 @@ footer {
   .stats-bar { padding: 24px; gap: 28px; flex-wrap: wrap; }
 
   .brand-intro { padding: 72px 24px; grid-template-columns: 1fr; gap: 56px; }
+  .production-section { padding: 72px 24px; }
+  .production-grid { grid-template-columns: 1fr 1fr; }
   .products-preview { padding: 56px 24px 80px; }
   .product-grid-mini { grid-template-columns: 1fr 1fr; }
   .sec-header { flex-direction: column; align-items: flex-start; gap: 24px; }
@@ -1736,6 +1844,10 @@ footer {
   .form-grid { grid-template-columns: 1fr; }
 
   footer { padding: 40px 24px; flex-direction: column; gap: 20px; text-align: center; }
+}
+
+@media (max-width: 600px) {
+  .production-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -1775,7 +1887,7 @@ footer {
         <span class="red">Culinary</span>
         Group
       </h1>
-      <p class="hero-tagline">Restaurant-Quality Dumplings, Made in Los Angeles.</p>
+      <p class="hero-tagline">Premium Dumplings &amp; Dim Sum Manufacturer — supplying restaurants, hotels, and hospitality groups across California.</p>
       <div class="cta-row">
         <button class="btn btn-red" onclick="showPage('products')">Our Products</button>
         <button class="btn btn-ghost" onclick="showPage('wholesale')">Partner With Us</button>
@@ -1813,6 +1925,38 @@ footer {
     </div>
   </section>
 
+  <section class="production-section">
+    <div class="production-inner">
+      <div class="production-header">
+        <div class="section-label" style="color:var(--gold-light);">Operations</div>
+        <h2 class="production-title">Our Production</h2>
+        <p class="production-sub">Built for the demands of professional food service — consistent, scalable, and food-safe.</p>
+      </div>
+      <div class="production-grid">
+        <div class="prod-point">
+          <div class="prod-point-icon">01</div>
+          <div class="prod-point-title">Commercial Kitchen Production</div>
+          <div class="prod-point-desc">Manufactured in a licensed commercial facility in Monterey Park, CA — built for high-volume, consistent output.</div>
+        </div>
+        <div class="prod-point">
+          <div class="prod-point-icon">02</div>
+          <div class="prod-point-title">Restaurant &amp; Hospitality Supply</div>
+          <div class="prod-point-desc">We supply restaurants, hotels, stadiums, and hospitality groups with ready-to-serve frozen products.</div>
+        </div>
+        <div class="prod-point">
+          <div class="prod-point-icon">03</div>
+          <div class="prod-point-title">Consistent Bulk Production</div>
+          <div class="prod-point-desc">Every batch is produced to spec — same weight, same taste, same quality — so your kitchen runs without surprises.</div>
+        </div>
+        <div class="prod-point">
+          <div class="prod-point-icon">04</div>
+          <div class="prod-point-title">Food Safety &amp; Quality Standards</div>
+          <div class="prod-point-desc">Strict food safety protocols, proper handling, and cold-chain delivery to meet the standards of top-tier accounts.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="products-preview">
     <div class="sec-header">
       <div>
@@ -1847,10 +1991,10 @@ footer {
 
   <section class="customers-section">
     <div class="customers-header">
-      <div class="section-label">Trusted By</div>
-    </div>
-    <div class="clients-heading">
-      <p>Trusted by leading hotels, restaurants, and foodservice partners across California and beyond.</p>
+      <div>
+        <div class="section-label">Our Partners</div>
+        <h2 class="clients-title">Trusted by Hotels, Restaurants &amp; Hospitality Groups</h2>
+      </div>
     </div>
     <div class="customers-track-wrap">
       <div class="customers-track">
@@ -2002,6 +2146,7 @@ footer {
     <div class="footer-brand">
       <div class="footer-logo">JRC</div>
       <div class="footer-tagline">Dumplings &amp; Dim Sum — Made in Los Angeles.</div>
+      <div class="footer-address">566 Monterey Pass Rd, Monterey Park, California</div>
     </div>
     <div style="display:flex;align-items:center;gap:20px;">
       <div class="footer-social">
@@ -2037,7 +2182,7 @@ footer {
         Operating out of our facility in Monterey Park, we manufacture premium dumplings and frozen Asian foods using authentic recipes rooted in tradition. Every product we make reflects our commitment to real ingredients, real technique, and real flavor.
       </p>
       <p>
-        We're building toward something big — a nationally recognized brand that stands alongside the best in Asian frozen food. Think Bibigo. Think scale. Think JRC.
+        We're building toward something big — a nationally recognized brand that stands alongside the best in Asian frozen food.
       </p>
       <div class="location-tag">566 Monterey Pass Rd, Monterey Park, CA</div>
     </div>
@@ -2072,6 +2217,7 @@ footer {
     <div class="footer-brand">
       <div class="footer-logo">JRC</div>
       <div class="footer-tagline">Dumplings &amp; Dim Sum — Made in Los Angeles.</div>
+      <div class="footer-address">566 Monterey Pass Rd, Monterey Park, California</div>
     </div>
     <div style="display:flex;align-items:center;gap:20px;">
       <div class="footer-social">
@@ -2327,6 +2473,7 @@ footer {
     <div class="footer-brand">
       <div class="footer-logo">JRC</div>
       <div class="footer-tagline">Dumplings &amp; Dim Sum — Made in Los Angeles.</div>
+      <div class="footer-address">566 Monterey Pass Rd, Monterey Park, California</div>
     </div>
     <div style="display:flex;align-items:center;gap:20px;">
       <div class="footer-social">
@@ -2441,6 +2588,7 @@ footer {
     <div class="footer-brand">
       <div class="footer-logo">JRC</div>
       <div class="footer-tagline">Dumplings &amp; Dim Sum — Made in Los Angeles.</div>
+      <div class="footer-address">566 Monterey Pass Rd, Monterey Park, California</div>
     </div>
     <div style="display:flex;align-items:center;gap:20px;">
       <div class="footer-social">
@@ -2677,6 +2825,7 @@ footer {
     <div class="footer-brand">
       <div class="footer-logo">JRC</div>
       <div class="footer-tagline">Dumplings &amp; Dim Sum — Made in Los Angeles.</div>
+      <div class="footer-address">566 Monterey Pass Rd, Monterey Park, California</div>
     </div>
     <div style="display:flex;align-items:center;gap:20px;">
       <div class="footer-social">
