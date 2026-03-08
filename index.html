@@ -848,6 +848,95 @@ select option { background: var(--white); color: var(--ink); }
 }
 .form-success p { color: var(--muted); font-style: italic; font-size: 17px; }
 
+/* ─── VISIT FACILITY ─── */
+.visit-facility {
+  padding: 100px 88px;
+  background: var(--light-bg);
+  text-align: center;
+}
+
+.visit-facility .section-label {
+  margin-bottom: 16px;
+}
+
+.visit-headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(36px, 5vw, 60px);
+  text-transform: uppercase;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.visit-sub {
+  font-family: 'Crimson Pro', serif;
+  font-size: clamp(17px, 2vw, 21px);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--muted);
+  max-width: 680px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+}
+
+.visit-desc {
+  font-family: 'Crimson Pro', serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto 36px;
+  font-weight: 300;
+}
+
+.visit-address {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--crimson);
+  margin-bottom: 36px;
+}
+
+.visit-address::before {
+  content: '◆';
+  font-size: 8px;
+}
+
+.visit-btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+.visit-map {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(26,10,10,0.1), 0 1px 6px rgba(26,10,10,0.06);
+}
+
+.visit-map iframe {
+  width: 100%;
+  height: 420px;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .visit-facility { padding: 72px 24px; }
+  .visit-map iframe { height: 300px; }
+}
+
 /* ─── CUSTOMERS ─── */
 .customers-section {
   padding: 80px 0 88px;
@@ -977,6 +1066,12 @@ select option { background: var(--white); color: var(--ink); }
   margin-bottom: 28px;
 }
 
+.cat-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .cat-title {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 800;
@@ -984,6 +1079,15 @@ select option { background: var(--white); color: var(--ink); }
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--ink);
+  white-space: nowrap;
+}
+
+.cat-offer {
+  font-family: 'Crimson Pro', serif;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--crimson);
+  letter-spacing: 0.5px;
   white-space: nowrap;
 }
 
@@ -1538,6 +1642,28 @@ footer {
     </div>
   </section>
 
+  <!-- VisitFacilitySection -->
+  <section class="visit-facility">
+    <div class="section-label">Our Location</div>
+    <h2 class="visit-headline">Visit Our Production Facility</h2>
+    <p class="visit-sub">JRC Culinary Group proudly manufactures premium dumplings and dim sum in Southern California.</p>
+    <p class="visit-desc">Our facility in Monterey Park is dedicated to producing high-quality dumplings and dim sum for restaurants, distributors, and food service partners. We focus on consistency, food safety, and authentic flavor in every product we make.</p>
+    <div class="visit-address">566 Monterey Pass Rd, Monterey Park, CA</div>
+    <div class="visit-btns">
+      <a class="btn btn-red" href="https://www.google.com/maps/dir/?api=1&destination=566+Monterey+Pass+Rd,+Monterey+Park,+CA" target="_blank" rel="noopener">Get Directions</a>
+      <button class="btn btn-ghost" onclick="showPage('wholesale')">Contact Our Team</button>
+    </div>
+    <div class="visit-map">
+      <iframe
+        src="https://maps.google.com/maps?q=566+Monterey+Pass+Rd,+Monterey+Park,+CA+91754&output=embed"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="JRC Culinary Group Location">
+      </iframe>
+    </div>
+  </section>
+
   <footer>
     <div class="footer-brand">
       <div class="footer-logo">JRC</div>
@@ -1558,6 +1684,7 @@ footer {
 
   <section class="about-body">
     <div class="about-story">
+      <div class="section-label" style="margin-bottom:14px;">Over 20 Years of Food Manufacturing Excellence</div>
       <h2>Built From Scratch in Los Angeles</h2>
       <p>
         JRC Culinary Group was founded with one clear vision: to bring authentic, restaurant-quality Asian dumplings to the mainstream frozen food market. We believe the best dumplings shouldn't be limited to dim sum restaurants — they should be accessible to everyone, everywhere.
@@ -1620,7 +1747,10 @@ footer {
     <!-- ── Dim Sum Collection ── -->
     <div class="cat-section">
       <div class="cat-header">
-        <div class="cat-title">Dim Sum Collection</div>
+        <div class="cat-title-group">
+          <div class="cat-title">Dim Sum Collection</div>
+          <div class="cat-offer">What We Offer</div>
+        </div>
         <div class="cat-count">5</div>
         <div class="cat-line"></div>
       </div>
@@ -1692,7 +1822,10 @@ footer {
     <!-- ── Dumplings ── -->
     <div class="cat-section">
       <div class="cat-header">
-        <div class="cat-title">Dumplings</div>
+        <div class="cat-title-group">
+          <div class="cat-title">Dumplings</div>
+          <div class="cat-offer">What We Offer</div>
+        </div>
         <div class="cat-count">3</div>
         <div class="cat-line"></div>
       </div>
@@ -1740,7 +1873,10 @@ footer {
     <!-- ── Soup Dumplings ── -->
     <div class="cat-section">
       <div class="cat-header">
-        <div class="cat-title">Soup Dumplings</div>
+        <div class="cat-title-group">
+          <div class="cat-title">Soup Dumplings</div>
+          <div class="cat-offer">What We Offer</div>
+        </div>
         <div class="cat-count">3</div>
         <div class="cat-line"></div>
       </div>
@@ -1788,7 +1924,10 @@ footer {
     <!-- ── Bao & Buns ── -->
     <div class="cat-section">
       <div class="cat-header">
-        <div class="cat-title">Bao &amp; Buns</div>
+        <div class="cat-title-group">
+          <div class="cat-title">Bao &amp; Buns</div>
+          <div class="cat-offer">What We Offer</div>
+        </div>
         <div class="cat-count">Coming Soon</div>
         <div class="cat-line"></div>
       </div>
@@ -1808,7 +1947,10 @@ footer {
     <!-- ── Specialty Items ── -->
     <div class="cat-section">
       <div class="cat-header">
-        <div class="cat-title">Specialty Items</div>
+        <div class="cat-title-group">
+          <div class="cat-title">Specialty Items</div>
+          <div class="cat-offer">What We Offer</div>
+        </div>
         <div class="cat-count">Coming Soon</div>
         <div class="cat-line"></div>
       </div>
