@@ -1808,6 +1808,254 @@ footer {
   filter: brightness(1.08);
 }
 
+/* ─── HOW IT WORKS ─── */
+.how-section {
+  background: var(--cream-dark);
+  padding: 100px 88px;
+}
+.how-header {
+  margin-bottom: 64px;
+}
+.how-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(36px, 5vw, 58px);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  line-height: 0.95;
+  margin-top: 12px;
+}
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  position: relative;
+}
+.how-step {
+  background: var(--white);
+  padding: 44px 36px 40px;
+  position: relative;
+  border-top: 3px solid transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.how-step:hover {
+  border-top-color: var(--crimson);
+  box-shadow: 0 4px 24px rgba(26,10,10,0.07);
+}
+.how-step-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 72px;
+  color: rgba(192,57,43,0.08);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.how-step-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(192,57,43,0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.how-step-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--crimson);
+  opacity: 0.8;
+}
+.how-step-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--ink);
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+.how-step-desc {
+  font-family: 'Crimson Pro', serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--muted);
+  font-weight: 300;
+}
+.how-step-connector {
+  position: absolute;
+  top: 56px;
+  right: -14px;
+  width: 28px;
+  height: 2px;
+  background: rgba(192,57,43,0.2);
+  z-index: 2;
+}
+.how-step:last-child .how-step-connector { display: none; }
+
+/* ─── WHY JRC ─── */
+.why-section {
+  background: var(--light-bg);
+  padding: 100px 88px;
+}
+.why-header {
+  margin-bottom: 60px;
+}
+.why-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(36px, 5vw, 58px);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  line-height: 0.95;
+  margin-top: 12px;
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.why-card {
+  background: var(--white);
+  padding: 40px 32px;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.why-card:hover {
+  border-bottom-color: var(--crimson);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(26,10,10,0.08);
+}
+.why-card-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(192,57,43,0.07);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.why-card-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--crimson);
+}
+.why-card-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: var(--ink);
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+.why-card-desc {
+  font-family: 'Crimson Pro', serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+/* ─── BEHIND THE KITCHEN ─── */
+.kitchen-section {
+  background: var(--near-black);
+  padding: 100px 88px;
+}
+.kitchen-header {
+  margin-bottom: 56px;
+}
+.kitchen-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(36px, 5vw, 58px);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  line-height: 0.95;
+  margin-top: 12px;
+}
+.kitchen-sub {
+  font-family: 'Crimson Pro', serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 300;
+  color: rgba(250,247,242,0.45);
+  max-width: 480px;
+  line-height: 1.65;
+  margin-top: 14px;
+}
+.kitchen-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+.kitchen-block {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255,255,255,0.04);
+  transition: background 0.3s;
+}
+.kitchen-block:hover { background: rgba(255,255,255,0.07); }
+.kitchen-img-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.kitchen-img-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(192,57,43,0.12) 0%, rgba(192,57,43,0.04) 50%, transparent 100%);
+}
+.kitchen-img-placeholder svg {
+  width: 40px;
+  height: 40px;
+  opacity: 0.15;
+  fill: var(--white);
+  position: relative;
+  z-index: 1;
+}
+.kitchen-block-text {
+  padding: 28px 32px 36px;
+}
+.kitchen-block-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--crimson);
+  margin-bottom: 10px;
+}
+.kitchen-block-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+.kitchen-block-desc {
+  font-family: 'Crimson Pro', serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(250,247,242,0.5);
+  font-weight: 300;
+}
+
 /* ─── FOOTER ADDRESS ─── */
 .footer-address {
   font-family: 'Barlow Condensed', sans-serif;
@@ -1831,6 +2079,13 @@ footer {
   .brand-intro { padding: 72px 24px; grid-template-columns: 1fr; gap: 56px; }
   .production-section { padding: 72px 24px; }
   .production-grid { grid-template-columns: 1fr 1fr; }
+  .how-section { padding: 72px 24px; }
+  .how-steps { grid-template-columns: 1fr 1fr; }
+  .how-step-connector { display: none; }
+  .why-section { padding: 72px 24px; }
+  .why-grid { grid-template-columns: 1fr 1fr; }
+  .kitchen-section { padding: 72px 24px; }
+  .kitchen-grid { grid-template-columns: 1fr; }
   .products-preview { padding: 56px 24px 80px; }
   .product-grid-mini { grid-template-columns: 1fr 1fr; }
   .sec-header { flex-direction: column; align-items: flex-start; gap: 24px; }
@@ -1848,6 +2103,8 @@ footer {
 
 @media (max-width: 600px) {
   .production-grid { grid-template-columns: 1fr; }
+  .how-steps { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -1957,6 +2214,51 @@ footer {
     </div>
   </section>
 
+  <!-- HOW IT WORKS -->
+  <section class="how-section">
+    <div class="how-header">
+      <div class="section-label">The Process</div>
+      <h2 class="how-title">How Restaurants<br>Work With Us</h2>
+    </div>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-step-num">01</div>
+        <div class="how-step-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/></svg>
+        </div>
+        <div class="how-step-title">Restaurant Inquiry</div>
+        <div class="how-step-desc">Restaurants contact us for wholesale partnership and product availability.</div>
+        <div class="how-step-connector"></div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">02</div>
+        <div class="how-step-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 5H7c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2h-2c0-1.1-.9-2-2-2s-2 .9-2 2zm0 0c0-1.1.9-2 2-2s2 .9 2 2H9zm3 5l3 3-3 3-1.4-1.4 1.6-1.6-1.6-1.6L12 10zm-4 0l-1.4 1.4 1.6 1.6-1.6 1.6L8 16l3-3-3-3z"/></svg>
+        </div>
+        <div class="how-step-title">Product Selection</div>
+        <div class="how-step-desc">Choose from dumplings, shumai, and dim sum products suitable for restaurant kitchens.</div>
+        <div class="how-step-connector"></div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">03</div>
+        <div class="how-step-icon">
+          <svg viewBox="0 0 24 24"><path d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1zm15.03-7c0-1.93-1.51-3.37-3.64-3.95l-1.45-2.66-6.2 2.36L4 12.09c.16 1.26.65 2.2 1.4 2.98.75.79 1.76 1.37 3.09 1.62l.46.37c.04.53.48.95 1.01.95.56 0 1.01-.45 1.01-1l.02-.46.46-.37c1.33-.25 2.34-.83 3.09-1.62.35-.37.63-.77.86-1.2l.63.24v.4z"/></svg>
+        </div>
+        <div class="how-step-title">Production</div>
+        <div class="how-step-desc">Products are prepared in our commercial kitchen with consistent quality and food safety standards.</div>
+        <div class="how-step-connector"></div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">04</div>
+        <div class="how-step-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+        </div>
+        <div class="how-step-title">Delivery &amp; Supply</div>
+        <div class="how-step-desc">Orders are prepared for pickup or delivery to restaurant partners.</div>
+      </div>
+    </div>
+  </section>
+
   <section class="products-preview">
     <div class="sec-header">
       <div>
@@ -1985,6 +2287,85 @@ footer {
         <div class="pcm-icon"></div>
         <div class="pcm-name">Wontons</div>
         <div class="pcm-desc">Versatile — great in soup or pan-fried</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY RESTAURANTS CHOOSE JRC -->
+  <section class="why-section">
+    <div class="why-header">
+      <div class="section-label">Our Strengths</div>
+      <h2 class="why-title">Why Restaurants<br>Choose JRC</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <div class="why-card-title">Consistent Quality</div>
+        <div class="why-card-desc">Reliable dumpling and dim sum production — same taste, same weight, same standard every time.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M18.06 22.99h1.66c.84 0 1.53-.64 1.63-1.46L23 5.05h-5V1h-1.97v4.05h-4.97l.3 2.34c1.71.47 3.31 1.32 4.27 2.26 1.44 1.42 2.43 2.89 2.43 5.29v8.05zM1 21.99V21h15.03v.99c0 .55-.45 1-1.01 1H2.01c-.56 0-1.01-.45-1.01-1zm15.03-7c0-8.05-16.03-8.05-16.03 0h16.03z"/></svg>
+        </div>
+        <div class="why-card-title">Restaurant-Ready Products</div>
+        <div class="why-card-desc">Designed for professional kitchens and hospitality operations — easy to prepare, built for volume.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </div>
+        <div class="why-card-title">Local Production</div>
+        <div class="why-card-desc">Prepared in Southern California — supporting local restaurant partners with fresh, regional supply.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+        </div>
+        <div class="why-card-title">Hospitality Experience</div>
+        <div class="why-card-desc">Trusted by restaurants, hotels, stadiums, and hospitality groups across California.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEHIND THE KITCHEN -->
+  <section class="kitchen-section">
+    <div class="kitchen-header">
+      <div class="section-label" style="color:var(--gold-light);">Our Story</div>
+      <h2 class="kitchen-title">Behind the Kitchen</h2>
+      <p class="kitchen-sub">A look at how we prepare, produce, and deliver dumplings and dim sum to our partners.</p>
+    </div>
+    <div class="kitchen-grid">
+      <div class="kitchen-block">
+        <div class="kitchen-img-placeholder">
+          <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+        </div>
+        <div class="kitchen-block-text">
+          <div class="kitchen-block-label">Step 01</div>
+          <div class="kitchen-block-title">Handcrafted Preparation</div>
+          <div class="kitchen-block-desc">Our dumplings are prepared with attention to traditional techniques — real ingredients, real care, real flavor.</div>
+        </div>
+      </div>
+      <div class="kitchen-block">
+        <div class="kitchen-img-placeholder">
+          <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+        </div>
+        <div class="kitchen-block-text">
+          <div class="kitchen-block-label">Step 02</div>
+          <div class="kitchen-block-title">Commercial Kitchen Production</div>
+          <div class="kitchen-block-desc">We produce dumplings and dim sum in a professional kitchen environment — consistent, scalable, and food-safe.</div>
+        </div>
+      </div>
+      <div class="kitchen-block">
+        <div class="kitchen-img-placeholder">
+          <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+        </div>
+        <div class="kitchen-block-text">
+          <div class="kitchen-block-label">Step 03</div>
+          <div class="kitchen-block-title">Restaurant Supply</div>
+          <div class="kitchen-block-desc">Our products are delivered to restaurant partners across California — ready for your kitchen.</div>
+        </div>
       </div>
     </div>
   </section>
