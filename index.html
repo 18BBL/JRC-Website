@@ -216,7 +216,7 @@ nav {
   font-size: clamp(76px, 11vw, 136px);
   line-height: 0.88;
   text-transform: uppercase;
-  letter-spacing: -2px;
+  letter-spacing: -0.03em;
   color: var(--cream);
   margin-bottom: 6px;
 }
@@ -306,6 +306,7 @@ nav {
   font-size: clamp(40px, 5vw, 66px);
   text-transform: uppercase;
   line-height: 0.92;
+  letter-spacing: -0.02em;
   color: var(--ink);
   margin-bottom: 32px;
 }
@@ -479,6 +480,7 @@ nav {
   font-size: clamp(64px, 9.5vw, 118px);
   text-transform: uppercase;
   line-height: 0.88;
+  letter-spacing: -0.03em;
   color: var(--white);
 }
 .page-title .red { color: var(--crimson-light); }
@@ -863,6 +865,7 @@ select option { background: var(--white); color: var(--ink); }
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 900;
   font-size: clamp(36px, 5vw, 60px);
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   color: var(--ink);
   line-height: 1;
@@ -1523,7 +1526,7 @@ footer {
         <span class="red">Culinary</span>
         Group
       </h1>
-      <p class="hero-tagline">Crafted in LA. Made for Everyone.</p>
+      <p class="hero-tagline">Restaurant-Quality Dumplings, Made in Los Angeles.</p>
       <div class="cta-row">
         <button class="btn btn-red" onclick="showPage('products')">Our Products</button>
         <button class="btn btn-ghost" onclick="showPage('wholesale')">Partner With Us</button>
@@ -1532,21 +1535,21 @@ footer {
   </section>
 
   <div class="stats-bar">
-    <div><div class="stat-num">15+</div><div class="stat-lbl">Signature Products</div></div>
-    <div><div class="stat-num">LA</div><div class="stat-lbl">Based &amp; Made</div></div>
-    <div><div class="stat-num">100%</div><div class="stat-lbl">Authentic Recipes</div></div>
-    <div><div class="stat-num">B2B</div><div class="stat-lbl">Wholesale Ready</div></div>
+    <div><div class="stat-num">15+</div><div class="stat-lbl">Products Available</div></div>
+    <div><div class="stat-num">LA</div><div class="stat-lbl">Based &amp; Manufactured</div></div>
+    <div><div class="stat-num">20+</div><div class="stat-lbl">Years in Food Manufacturing</div></div>
+    <div><div class="stat-num">B2B</div><div class="stat-lbl">Restaurant &amp; Distributor Ready</div></div>
   </div>
 
   <section class="brand-intro">
     <div>
       <div class="section-label">Who We Are</div>
-      <h2 class="section-title">Premium<br>Asian Foods,<br>Built to Scale</h2>
+      <h2 class="section-title">Dumplings &amp;<br>Dim Sum, Made<br>Right Here in LA</h2>
       <p class="body-text">
-        JRC Culinary Group is a Los Angeles-based food manufacturing company producing high-quality dumplings and frozen Asian foods. From hand-crafted soup dumplings to perfectly seasoned shumai, every product is made with authentic recipes and uncompromising standards.
+        JRC Culinary Group produces dumplings, shumai, and specialty dim sum for restaurants, distributors, and food service partners across California. We operate out of Monterey Park and have been in food manufacturing for over 20 years.
       </p>
       <p class="body-text">
-        Our mission is simple: build the next great Asian frozen food brand — one dumpling at a time.
+        Every product we make is built for food service — consistent portions, reliable quality, and flavors your customers will come back for.
       </p>
     </div>
     <div class="dumpling-wrap">
@@ -1557,7 +1560,7 @@ footer {
         <div class="dv-pleat"></div>
         <div class="dv-sheen"></div>
       </div>
-      <div class="dv-label">Handcrafted Quality</div>
+      <div class="dv-label">Made in Monterey Park, CA</div>
     </div>
   </section>
 
@@ -1565,7 +1568,7 @@ footer {
     <div class="sec-header">
       <div>
         <div class="section-label">Our Products</div>
-        <h2 class="section-title">Signature<br>Lineup</h2>
+        <h2 class="section-title">What<br>We Make</h2>
       </div>
       <button class="btn btn-ghost" onclick="showPage('products')">View All</button>
     </div>
@@ -1573,29 +1576,29 @@ footer {
       <div class="pcm" onclick="showPage('products')">
         <div class="pcm-icon"></div>
         <div class="pcm-name">Soup Dumplings</div>
-        <div class="pcm-desc">Xiao Long Bao with rich broth inside</div>
+        <div class="pcm-desc">Thin-skinned, broth-filled, steamed to order</div>
       </div>
       <div class="pcm" onclick="showPage('products')">
         <div class="pcm-icon"></div>
         <div class="pcm-name">Shumai</div>
-        <div class="pcm-desc">Open-top dim sum classic</div>
+        <div class="pcm-desc">Pork &amp; shrimp, a dim sum staple</div>
       </div>
       <div class="pcm" onclick="showPage('products')">
         <div class="pcm-icon"></div>
         <div class="pcm-name">Potstickers</div>
-        <div class="pcm-desc">Pan-fried with crispy golden bottom</div>
+        <div class="pcm-desc">Crispy bottom, juicy inside</div>
       </div>
       <div class="pcm" onclick="showPage('products')">
         <div class="pcm-icon"></div>
         <div class="pcm-name">Wontons</div>
-        <div class="pcm-desc">Silky wrappers, savory filling</div>
+        <div class="pcm-desc">Versatile — great in soup or pan-fried</div>
       </div>
     </div>
   </section>
 
   <section class="customers-section">
     <div class="customers-header">
-      <div class="section-label">Our Customers</div>
+      <div class="section-label">Trusted By</div>
     </div>
     <div class="customers-track-wrap">
       <div class="customers-track">
@@ -1645,9 +1648,9 @@ footer {
   <!-- VisitFacilitySection -->
   <section class="visit-facility">
     <div class="section-label">Our Location</div>
-    <h2 class="visit-headline">Visit Our Production Facility</h2>
-    <p class="visit-sub">JRC Culinary Group proudly manufactures premium dumplings and dim sum in Southern California.</p>
-    <p class="visit-desc">Our facility in Monterey Park is dedicated to producing high-quality dumplings and dim sum for restaurants, distributors, and food service partners. We focus on consistency, food safety, and authentic flavor in every product we make.</p>
+    <h2 class="visit-headline">Come See Where It's Made</h2>
+    <p class="visit-sub">Our production facility is in Monterey Park, CA — right in the heart of the San Gabriel Valley food corridor.</p>
+    <p class="visit-desc">We welcome restaurant owners, distributors, and food service buyers to visit our facility. See how we produce dumplings, dim sum, and specialty items — and talk directly with our team about what we can build together.</p>
     <div class="visit-address">566 Monterey Pass Rd, Monterey Park, CA</div>
     <div class="visit-btns">
       <a class="btn btn-red" href="https://www.google.com/maps/dir/?api=1&destination=566+Monterey+Pass+Rd,+Monterey+Park,+CA" target="_blank" rel="noopener">Get Directions</a>
@@ -1667,7 +1670,7 @@ footer {
   <footer>
     <div class="footer-brand">
       <div class="footer-logo">JRC</div>
-      <div class="footer-tagline">Crafted in LA. Made for Everyone.</div>
+      <div class="footer-tagline">Dumplings &amp; Dim Sum — Made in Los Angeles.</div>
     </div>
     <div class="footer-copy">© 2025 JRC Culinary Group</div>
   </footer>
@@ -1727,7 +1730,7 @@ footer {
   <footer>
     <div class="footer-brand">
       <div class="footer-logo">JRC</div>
-      <div class="footer-tagline">Crafted in LA. Made for Everyone.</div>
+      <div class="footer-tagline">Dumplings &amp; Dim Sum — Made in Los Angeles.</div>
     </div>
     <div class="footer-copy">© 2025 JRC Culinary Group</div>
   </footer>
@@ -1972,7 +1975,7 @@ footer {
   <footer>
     <div class="footer-brand">
       <div class="footer-logo">JRC</div>
-      <div class="footer-tagline">Crafted in LA. Made for Everyone.</div>
+      <div class="footer-tagline">Dumplings &amp; Dim Sum — Made in Los Angeles.</div>
     </div>
     <div class="footer-copy">© 2025 JRC Culinary Group</div>
   </footer>
@@ -2076,7 +2079,7 @@ footer {
   <footer>
     <div class="footer-brand">
       <div class="footer-logo">JRC</div>
-      <div class="footer-tagline">Crafted in LA. Made for Everyone.</div>
+      <div class="footer-tagline">Dumplings &amp; Dim Sum — Made in Los Angeles.</div>
     </div>
     <div class="footer-copy">© 2025 JRC Culinary Group</div>
   </footer>
@@ -2302,7 +2305,7 @@ footer {
   <footer>
     <div class="footer-brand">
       <div class="footer-logo">JRC</div>
-      <div class="footer-tagline">Crafted in LA. Made for Everyone.</div>
+      <div class="footer-tagline">Dumplings &amp; Dim Sum — Made in Los Angeles.</div>
     </div>
     <div class="footer-copy">© 2025 JRC Culinary Group</div>
   </footer>
