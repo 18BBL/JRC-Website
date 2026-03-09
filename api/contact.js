@@ -2,7 +2,9 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const FROM_ADDRESS = 'JRC Culinary Group <jrcculinarygroup@gmail.com>';
+// FROM must be a Resend-verified domain (jrcfoods.com)
+// All notifications and replies go TO jrcculinarygroup@gmail.com
+const FROM_ADDRESS = 'JRC Culinary Group <noreply@jrcfoods.com>';
 const OWNER_EMAIL  = 'jrcculinarygroup@gmail.com';
 
 export default async function handler(req, res) {
@@ -26,6 +28,7 @@ export default async function handler(req, res) {
     await resend.emails.send({
       from: FROM_ADDRESS,
       to: OWNER_EMAIL,
+      reply_to: email,
       subject: `New Wholesale Inquiry — ${company}`,
       html: `
         <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1E1E1E;">
