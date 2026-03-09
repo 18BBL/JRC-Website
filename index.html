@@ -2270,6 +2270,123 @@ footer {
   border-radius: 50%;
 }
 
+/* ─── OUR STORY SECTION ─── */
+.our-story-section {
+  background: var(--white);
+  padding: 110px 88px;
+  border-top: 1px solid rgba(192,57,43,0.08);
+}
+.our-story-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.our-story-text .section-label { margin-bottom: 12px; }
+.our-story-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(36px, 5vw, 54px);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  line-height: 0.95;
+  margin: 8px 0 4px;
+}
+.our-story-zh {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: var(--crimson);
+  opacity: 0.45;
+  display: block;
+  margin-bottom: 28px;
+}
+.our-story-text p {
+  font-family: 'Crimson Pro', serif;
+  font-size: 18px;
+  line-height: 1.85;
+  color: var(--ink-mid);
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.our-story-text p:last-child { margin-bottom: 0; }
+.our-story-img-placeholder {
+  aspect-ratio: 4 / 5;
+  background: var(--cream-dark);
+  border: 1px solid rgba(192,57,43,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: var(--muted);
+}
+.our-story-img-placeholder svg {
+  width: 40px;
+  height: 40px;
+  opacity: 0.3;
+}
+.our-story-img-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.5;
+  text-align: center;
+  padding: 0 24px;
+}
+@media (max-width: 900px) {
+  .our-story-section { padding: 72px 24px; }
+  .our-story-grid { grid-template-columns: 1fr; gap: 48px; }
+  .our-story-img-placeholder { aspect-ratio: 16 / 9; }
+}
+
+/* ─── LANGUAGE SWITCHER ─── */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-left: 32px;
+  border: 1px solid rgba(192,57,43,0.18);
+  border-radius: 2px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.lang-btn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.45;
+  background: none;
+  border: none;
+  border-right: 1px solid rgba(192,57,43,0.12);
+  padding: 6px 11px;
+  cursor: pointer;
+  transition: opacity 0.2s, background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+.lang-btn:last-child { border-right: none; }
+.lang-btn:hover { opacity: 0.9; background: rgba(192,57,43,0.05); }
+.lang-btn.active { opacity: 1; color: var(--crimson); background: rgba(192,57,43,0.07); }
+
+@media (max-width: 900px) {
+  .lang-switcher { margin-left: 16px; }
+  .lang-btn { font-size: 10px; padding: 5px 8px; letter-spacing: 1px; }
+}
+@media (max-width: 480px) {
+  .lang-switcher { margin-left: 10px; }
+  .lang-btn { padding: 5px 6px; }
+}
+
 /* ─── FOOTER ADDRESS ─── */
 .footer-address {
   font-family: 'Barlow Condensed', sans-serif;
@@ -2341,6 +2458,11 @@ footer {
     <li><a id="nav-wholesale" onclick="showPage('wholesale')">Contact</a></li>
     <li><a id="nav-team" onclick="showPage('team')">Team</a></li>
   </ul>
+  <div class="lang-switcher" role="group" aria-label="Language">
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="zh">中文</button>
+    <button class="lang-btn" data-lang="es">ES</button>
+  </div>
 </nav>
 
 <!-- ═══════ HOME ═══════ -->
@@ -2886,6 +3008,24 @@ footer {
         <div class="val-num">03</div>
         <div class="val-name">Scale</div>
         <div class="val-desc">We're not thinking small. Our operations, partnerships, and product line are all built to grow — regionally, then nationally.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="our-story-section">
+    <div class="our-story-grid">
+      <div class="our-story-text">
+        <div class="section-label">Our Story</div>
+        <h2 class="our-story-title">Our Story</h2>
+        <span class="our-story-zh">根源与传承</span>
+        <p>JRC Culinary Group began with recipes passed down through our family for generations. Growing up around Cantonese dim sum, dumplings were always part of our lives — from Lunar New Year gatherings at home to long days spent watching our mother cook in restaurant kitchens.</p>
+        <p>In 2023, JRC was founded in the San Gabriel Valley to bring those same authentic recipes to professional kitchens. Located in Monterey Park, one of the most vibrant centers of Chinese food culture in America, we produce traditional dumplings with the consistency and scale that restaurants need.</p>
+        <p>Every dumpling reflects the same care, precision, and handmade quality that our family practiced for generations.</p>
+      </div>
+      <div class="our-story-img-placeholder">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+        <div class="our-story-img-label">Dumpling making photo</div>
       </div>
     </div>
   </section>
@@ -3653,6 +3793,29 @@ function initDragDrop() {
   });
 }
 initDragDrop();
+
+// ── Language detection & switching ──
+function detectLanguage() {
+  const saved = localStorage.getItem('jrc-lang');
+  if (saved) return saved;
+  const browser = navigator.language || navigator.userLanguage;
+  if (browser.startsWith('zh')) return 'zh';
+  if (browser.startsWith('es')) return 'es';
+  return 'en';
+}
+
+const currentLang = detectLanguage();
+localStorage.setItem('jrc-lang', currentLang);
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  if (btn.dataset.lang === currentLang) btn.classList.add('active');
+  btn.addEventListener('click', () => {
+    const lang = btn.dataset.lang;
+    if (lang === currentLang) return;
+    localStorage.setItem('jrc-lang', lang);
+    location.reload();
+  });
+});
 
 // Init
 document.getElementById('page-home').classList.add('visible');
