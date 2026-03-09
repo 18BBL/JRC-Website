@@ -35,7 +35,7 @@ export default async function handler(req, res) {
       from:     FROM_ADDRESS,
       to:       OWNER_EMAIL,
       reply_to: email,                          // Reply goes directly to customer
-      subject:  'New Inquiry — JRC Culinary Group Website',
+      subject:  'New Website Inquiry – JRC Culinary Group',
       html: `
         <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1E1E1E;">
           <div style="background: #C0392B; padding: 28px 36px;">
@@ -106,7 +106,7 @@ export default async function handler(req, res) {
       from:     FROM_ADDRESS,
       to:       email,
       reply_to: OWNER_EMAIL,                    // Customer replies go to your inbox
-      subject:  'Thank You for Contacting JRC Culinary Group',
+      subject:  'Thank you for contacting JRC Culinary Group',
       html: `
         <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1E1E1E;">
           <div style="background: #C0392B; padding: 28px 36px;">
@@ -116,16 +116,25 @@ export default async function handler(req, res) {
           </div>
 
           <div style="padding: 40px 36px; background: #F7F4F0; border: 1px solid #e8e3db;">
-            <p style="font-size: 17px; line-height: 1.85; color: #555; margin: 0 0 20px;">Hello,</p>
+            <p style="font-size: 17px; line-height: 1.85; color: #555; margin: 0 0 20px;">Hi ${contact},</p>
             <p style="font-size: 17px; line-height: 1.85; color: #555; margin: 0 0 20px;">
               Thank you for reaching out to JRC Culinary Group.
             </p>
             <p style="font-size: 17px; line-height: 1.85; color: #555; margin: 0 0 20px;">
-              We have received your message and appreciate your interest. Our team will review your inquiry and respond as soon as possible.
+              We've received your message and someone from our team will review it shortly. If your inquiry is regarding product distribution, wholesale partnerships, or restaurant supply, we typically respond within 1 business day.
             </p>
-            <p style="font-size: 17px; line-height: 1.85; color: #1E1E1E; margin: 0;">
-              Best regards,<br>
-              <strong>JRC Culinary Group</strong>
+            <p style="font-size: 17px; line-height: 1.85; color: #555; margin: 0 0 28px;">
+              You can learn more about our company here:<br>
+              <a href="https://jrcfoods.com" style="color: #C0392B; text-decoration: none;">https://jrcfoods.com</a>
+            </p>
+            <p style="font-size: 17px; line-height: 1.85; color: #555; margin: 0 0 28px;">
+              We appreciate your interest and look forward to connecting.
+            </p>
+            <p style="font-size: 16px; line-height: 1.85; color: #1E1E1E; margin: 0;">
+              — <br>
+              <strong>JRC Culinary Group</strong><br>
+              <span style="color: #888; font-size: 14px;">Food Manufacturing &amp; Distribution</span><br>
+              <span style="color: #888; font-size: 14px;">Los Angeles, California</span>
             </p>
           </div>
 
