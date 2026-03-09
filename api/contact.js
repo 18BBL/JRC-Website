@@ -3,7 +3,7 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Email address that receives all inquiries
-const OWNER_EMAIL = 'info@jrcfoods.com';
+const OWNER_EMAIL = 'jrcculinarygroup@gmail.com';
 // Verified sender domain in Resend
 const FROM_ADDRESS = 'JRC Culinary Group <noreply@jrcfoods.com>';
 
