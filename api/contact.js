@@ -2,10 +2,8 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-// Email address that receives all inquiries
-const OWNER_EMAIL = 'jrcculinarygroup@gmail.com';
-// Verified sender domain in Resend
-const FROM_ADDRESS = 'JRC Culinary Group <noreply@jrcfoods.com>';
+const FROM_ADDRESS = 'JRC Culinary Group <jrcculinarygroup@gmail.com>';
+const OWNER_EMAIL  = 'jrcculinarygroup@gmail.com';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -18,14 +16,13 @@ export default async function handler(req, res) {
   if (!company || !contact || !email) {
     return res.status(400).json({ error: 'Company name, contact name, and email are required.' });
   }
-
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     return res.status(400).json({ error: 'Please provide a valid email address.' });
   }
 
   try {
-    // 1. Notify JRC team with full inquiry details
+    // 1. Internal notification to JRC team
     await resend.emails.send({
       from: FROM_ADDRESS,
       to: OWNER_EMAIL,
@@ -62,39 +59,33 @@ export default async function handler(req, res) {
       `,
     });
 
-    // 2. Send confirmation email to the person who submitted
+    // 2. Confirmation email to the customer
     await resend.emails.send({
       from: FROM_ADDRESS,
       to: email,
-      subject: `We received your inquiry — JRC Culinary Group`,
+      subject: 'We Received Your Inquiry – JRC Culinary Group',
       html: `
         <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1E1E1E;">
           <div style="background: #C0392B; padding: 28px 36px;">
             <h1 style="font-family: Arial, sans-serif; font-weight: 900; font-size: 24px; color: #fff; margin: 0; letter-spacing: 2px; text-transform: uppercase;">
               JRC Culinary Group
             </h1>
-            <p style="color: rgba(255,255,255,0.7); font-size: 13px; margin: 6px 0 0; letter-spacing: 1px;">
-              Inquiry Confirmation
-            </p>
           </div>
           <div style="padding: 40px 36px; background: #F7F4F0; border: 1px solid #e8e3db;">
-            <p style="font-size: 18px; line-height: 1.7; color: #1E1E1E; margin-bottom: 20px;">
-              Hi ${contact},
+            <p style="font-size: 17px; line-height: 1.85; color: #1E1E1E; margin: 0 0 20px;">Hello ${contact},</p>
+            <p style="font-size: 17px; line-height: 1.85; color: #555; margin: 0 0 20px;">
+              Thank you for contacting JRC Culinary Group. We've received your message and will review the details shortly.
             </p>
-            <p style="font-size: 17px; line-height: 1.85; color: #555; margin-bottom: 20px;">
-              Thank you for reaching out to JRC Culinary Group. We have received your wholesale inquiry and a member of our team will follow up within <strong>2 business days</strong>.
+            <p style="font-size: 17px; line-height: 1.85; color: #555; margin: 0 0 20px;">
+              Our team will follow up with you as soon as possible regarding products, wholesale inquiries, or partnerships.
             </p>
-            <p style="font-size: 17px; line-height: 1.85; color: #555; margin-bottom: 32px;">
-              In the meantime, feel free to browse our product catalog at <a href="https://jrcfoods.com" style="color: #C0392B;">jrcfoods.com</a>.
+            <p style="font-size: 17px; line-height: 1.85; color: #555; margin: 0 0 32px;">
+              If there's anything else you'd like us to know in the meantime, feel free to reply to this email.
             </p>
-            <div style="border-top: 1px solid #e0dbd3; padding-top: 28px; margin-top: 8px;">
-              <p style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #999; margin-bottom: 6px;">Your Inquiry Summary</p>
-              <p style="font-size: 15px; color: #555; line-height: 1.7; margin: 0;">
-                <strong>Company:</strong> ${company}<br>
-                <strong>Volume:</strong> ${volume || 'Not specified'}<br>
-                <strong>Location:</strong> ${location || 'Not specified'}
-              </p>
-            </div>
+            <p style="font-size: 17px; line-height: 1.85; color: #1E1E1E; margin: 0;">
+              Best regards,<br>
+              <strong>JRC Culinary Group</strong>
+            </p>
           </div>
           <div style="padding: 20px 36px; background: #1E1E1E; text-align: center;">
             <p style="font-size: 12px; color: rgba(255,255,255,0.3); letter-spacing: 1px; margin: 0;">JRC Culinary Group · 566 Monterey Pass Rd, Monterey Park, CA</p>
