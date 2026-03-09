@@ -2270,6 +2270,84 @@ footer {
   border-radius: 50%;
 }
 
+/* ─── PRODUCTS PAGE ENHANCEMENTS ─── */
+.products-intro {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 0 48px;
+  font-family: 'Crimson Pro', serif;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.7;
+  border-bottom: 1px solid rgba(192,57,43,0.08);
+  margin-bottom: 64px;
+}
+.cat-card-badge.top-seller {
+  background: var(--gold);
+  color: var(--white);
+}
+.cat-sub-label {
+  grid-column: 1 / -1;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--crimson);
+  padding: 24px 0 10px;
+  border-top: 1px solid rgba(192,57,43,0.1);
+  margin-top: 8px;
+}
+.cat-sub-label:first-child { border-top: none; margin-top: 0; padding-top: 0; }
+.catalog-toggle-wrap {
+  text-align: center;
+  padding: 8px 0 64px;
+}
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid rgba(26,26,26,0.25);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 16px 40px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-outline:hover { border-color: var(--crimson); color: var(--crimson); }
+.catalog-extended { display: none; }
+.catalog-extended.visible { display: block; }
+.products-cta {
+  background: var(--ink);
+  padding: 72px 88px;
+  text-align: center;
+}
+.products-cta-text {
+  font-family: 'Crimson Pro', serif;
+  font-size: 19px;
+  font-style: italic;
+  font-weight: 300;
+  color: rgba(250,247,242,0.65);
+  max-width: 620px;
+  margin: 0 auto 32px;
+  line-height: 1.8;
+}
+.cat-note {
+  font-family: 'Crimson Pro', serif;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--muted);
+  margin-top: 20px;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .products-cta { padding: 56px 24px; }
+}
+
 /* ─── OUR STORY SECTION ─── */
 .our-story-section {
   background: var(--white);
@@ -3068,30 +3146,160 @@ footer {
 
   <div class="products-catalog">
 
-    <!-- ── Dim Sum Collection ── -->
+    <p class="products-intro">JRC produces a wide range of dim sum, dumpling, and hospitality food products for restaurants, hotels, airline catering, and institutional partners.</p>
+
+    <!-- ── Top Sellers ── -->
     <div class="cat-section">
       <div class="cat-header">
         <div class="cat-title-group">
-          <div class="cat-title">Signature Dim Sum</div>
-          <div class="cat-offer">What We Offer</div>
+          <div class="cat-title">Top Sellers</div>
+          <div class="cat-offer">Most Ordered</div>
         </div>
-        <div class="cat-count">7</div>
+        <div class="cat-count">5</div>
+        <div class="cat-line"></div>
+      </div>
+      <div class="cat-grid">
+        <div class="cat-card">
+          <div class="cat-card-icon"></div>
+          <div class="cat-card-badge top-seller">Top Seller</div>
+          <div class="cat-card-name">Auto Pork Soup Dumpling</div>
+          <div class="cat-card-cn">猪肉小笼包</div>
+          <div class="cat-card-desc">Thin-skinned dumplings with seasoned pork and rich soup broth — our most-requested item.</div>
+          <div class="cat-card-meta">
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+          </div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-card-icon"></div>
+          <div class="cat-card-badge top-seller">Top Seller</div>
+          <div class="cat-card-name">Shrimp Hargow</div>
+          <div class="cat-card-cn">虾饺</div>
+          <div class="cat-card-desc">Delicate translucent shrimp dumplings, a cornerstone of Cantonese dim sum tradition.</div>
+          <div class="cat-card-meta">
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+          </div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-card-icon"></div>
+          <div class="cat-card-badge top-seller">Top Seller</div>
+          <div class="cat-card-name">Shumai Large</div>
+          <div class="cat-card-cn">大烧卖</div>
+          <div class="cat-card-desc">Pork &amp; shrimp open-top steamed dumplings. Our highest-volume wholesale item.</div>
+          <div class="cat-card-meta">
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Pack</span><span class="cat-meta-val">216 ct / 2.2 oz</span></div>
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+          </div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-card-icon"></div>
+          <div class="cat-card-badge top-seller">Top Seller</div>
+          <div class="cat-card-name">Lotus Leaf Wrap</div>
+          <div class="cat-card-cn">荷叶饭</div>
+          <div class="cat-card-desc">Sticky rice with pork and mushroom, wrapped and steamed in fragrant lotus leaf.</div>
+          <div class="cat-card-meta">
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+          </div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-card-icon"></div>
+          <div class="cat-card-badge top-seller">Top Seller</div>
+          <div class="cat-card-name">Bean Curd Roll</div>
+          <div class="cat-card-cn">腐皮卷</div>
+          <div class="cat-card-desc">Seasoned pork and shrimp filling wrapped in soft tofu skin and steamed to perfection.</div>
+          <div class="cat-card-meta">
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Dim Sum & Dumplings ── -->
+    <div class="cat-section">
+      <div class="cat-header">
+        <div class="cat-title-group">
+          <div class="cat-title">Dim Sum &amp; Dumplings</div>
+          <div class="cat-offer">Core Catalog</div>
+        </div>
+        <div class="cat-count">12</div>
         <div class="cat-line"></div>
       </div>
       <div class="cat-grid">
 
+        <div class="cat-sub-label">Soup Dumplings</div>
         <div class="cat-card">
           <div class="cat-card-icon"></div>
           <div class="cat-card-badge">Wholesale</div>
-          <div class="cat-card-name">Shumai</div>
-          <div class="cat-card-cn">烧卖</div>
-          <div class="cat-card-desc">Pork &amp; shrimp open-top steamed dumplings in thin yellow wonton skin.</div>
+          <div class="cat-card-name">Auto Pork Soup Dumpling</div>
+          <div class="cat-card-cn">猪肉小笼包</div>
+          <div class="cat-card-desc">Thin-skinned dumplings with seasoned pork and rich gelatin broth inside.</div>
+          <div class="cat-card-meta">
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+          </div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-card-icon"></div>
+          <div class="cat-card-badge">Wholesale</div>
+          <div class="cat-card-name">Auto Chicken Soup Dumpling</div>
+          <div class="cat-card-cn">鸡肉小笼包</div>
+          <div class="cat-card-desc">A lighter soup dumpling with seasoned chicken filling and a clean, savory broth.</div>
           <div class="cat-card-meta">
             <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
             <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
           </div>
         </div>
 
+        <div class="cat-sub-label">Shumai</div>
+        <div class="cat-card">
+          <div class="cat-card-icon"></div>
+          <div class="cat-card-badge">Wholesale</div>
+          <div class="cat-card-name">Shumai Large</div>
+          <div class="cat-card-cn">大烧卖</div>
+          <div class="cat-card-desc">Pork &amp; shrimp shumai in a large format — our most popular wholesale item.</div>
+          <div class="cat-card-meta">
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Pack</span><span class="cat-meta-val">216 ct / 2.2 oz</span></div>
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+          </div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-card-icon"></div>
+          <div class="cat-card-badge">Wholesale</div>
+          <div class="cat-card-name">Shumai Small</div>
+          <div class="cat-card-cn">小烧卖</div>
+          <div class="cat-card-desc">Pork &amp; shrimp shumai in a smaller portion for higher-volume service.</div>
+          <div class="cat-card-meta">
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Pack</span><span class="cat-meta-val">320 ct / 1.8 oz</span></div>
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+          </div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-card-icon"></div>
+          <div class="cat-card-badge">Wholesale</div>
+          <div class="cat-card-name">Chicken Mushroom Shumai</div>
+          <div class="cat-card-cn">鸡肉香菇烧卖</div>
+          <div class="cat-card-desc">Open-top steamed dumplings with seasoned chicken and shiitake mushroom filling.</div>
+          <div class="cat-card-meta">
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+          </div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-card-icon"></div>
+          <div class="cat-card-badge">Wholesale</div>
+          <div class="cat-card-name">Beef Shumai</div>
+          <div class="cat-card-cn">牛肉烧卖</div>
+          <div class="cat-card-desc">Savory seasoned beef filling in a classic open-top shumai wrapper.</div>
+          <div class="cat-card-meta">
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+          </div>
+        </div>
+
+        <div class="cat-sub-label">Dim Sum Classics</div>
         <div class="cat-card">
           <div class="cat-card-icon"></div>
           <div class="cat-card-badge">Wholesale</div>
@@ -3103,11 +3311,32 @@ footer {
             <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
           </div>
         </div>
-
         <div class="cat-card">
           <div class="cat-card-icon"></div>
           <div class="cat-card-badge">Wholesale</div>
-          <div class="cat-card-name">Pork &amp; Chive Cake</div>
+          <div class="cat-card-name">Chicken Feet</div>
+          <div class="cat-card-cn">凤爪</div>
+          <div class="cat-card-desc">Tender braised chicken feet in a savory black bean sauce — a classic dim sum favorite.</div>
+          <div class="cat-card-meta">
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+          </div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-card-icon"></div>
+          <div class="cat-card-badge">Wholesale</div>
+          <div class="cat-card-name">Bean Curd Roll</div>
+          <div class="cat-card-cn">腐皮卷</div>
+          <div class="cat-card-desc">Seasoned pork and shrimp filling wrapped in soft tofu skin and steamed to perfection.</div>
+          <div class="cat-card-meta">
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+          </div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-card-icon"></div>
+          <div class="cat-card-badge">Wholesale</div>
+          <div class="cat-card-name">Chive Cake</div>
           <div class="cat-card-cn">韭菜盒子</div>
           <div class="cat-card-desc">Pan-fried pastry filled with savory pork and fragrant Chinese chives.</div>
           <div class="cat-card-meta">
@@ -3115,7 +3344,6 @@ footer {
             <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
           </div>
         </div>
-
         <div class="cat-card">
           <div class="cat-card-icon"></div>
           <div class="cat-card-badge">Wholesale</div>
@@ -3128,38 +3356,15 @@ footer {
           </div>
         </div>
 
+        <div class="cat-sub-label">Specialty Dim Sum</div>
         <div class="cat-card">
           <div class="cat-card-icon"></div>
-          <div class="cat-card-badge">Wholesale</div>
-          <div class="cat-card-name">Beancurd Roll</div>
-          <div class="cat-card-cn">腐皮卷</div>
-          <div class="cat-card-desc">Seasoned pork and shrimp filling wrapped in soft tofu skin and steamed to perfection.</div>
+          <div class="cat-card-badge">Special Order</div>
+          <div class="cat-card-name">Shrimp Cigar Spring Rolls</div>
+          <div class="cat-card-cn">炸虾卷</div>
+          <div class="cat-card-desc">Crispy golden spring rolls filled with seasoned shrimp. Available on special order for hospitality accounts.</div>
           <div class="cat-card-meta">
-            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
-            <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
-          </div>
-        </div>
-
-        <div class="cat-card">
-          <div class="cat-card-icon"></div>
-          <div class="cat-card-badge">Wholesale</div>
-          <div class="cat-card-name">Chicken Feet</div>
-          <div class="cat-card-cn">凤爪</div>
-          <div class="cat-card-desc">Tender braised chicken feet in a savory black bean sauce — a classic dim sum favorite.</div>
-          <div class="cat-card-meta">
-            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
-            <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
-          </div>
-        </div>
-
-        <div class="cat-card">
-          <div class="cat-card-icon"></div>
-          <div class="cat-card-badge">Wholesale</div>
-          <div class="cat-card-name">Chicken Mushroom Shumai</div>
-          <div class="cat-card-cn">鸡肉香菇烧卖</div>
-          <div class="cat-card-desc">Open-top steamed dumplings with seasoned chicken and shiitake mushroom filling.</div>
-          <div class="cat-card-meta">
-            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Fry</span></div>
             <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
           </div>
         </div>
@@ -3167,152 +3372,336 @@ footer {
       </div>
     </div>
 
-    <!-- ── Dumplings ── -->
-    <div class="cat-section">
-      <div class="cat-header">
-        <div class="cat-title-group">
-          <div class="cat-title">Signature Dumplings</div>
-          <div class="cat-offer">What We Offer</div>
-        </div>
-        <div class="cat-count">3</div>
-        <div class="cat-line"></div>
-      </div>
-      <div class="cat-grid">
-
-        <div class="cat-card">
-          <div class="cat-card-icon"></div>
-          <div class="cat-card-badge">Wholesale</div>
-          <div class="cat-card-name">Pork Dumplings</div>
-          <div class="cat-card-cn">猪肉饺子</div>
-          <div class="cat-card-desc">Classic pork and cabbage filling in a chewy hand-wrapped dumpling skin.</div>
-          <div class="cat-card-meta">
-            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Boil / Pan-Fry</span></div>
-            <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
-          </div>
-        </div>
-
-        <div class="cat-card">
-          <div class="cat-card-icon"></div>
-          <div class="cat-card-badge">Wholesale</div>
-          <div class="cat-card-name">Chicken Dumplings</div>
-          <div class="cat-card-cn">鸡肉饺子</div>
-          <div class="cat-card-desc">Light and savory chicken filling with ginger and scallion in a thin wrapper.</div>
-          <div class="cat-card-meta">
-            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Boil / Pan-Fry</span></div>
-            <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
-          </div>
-        </div>
-
-        <div class="cat-card">
-          <div class="cat-card-icon"></div>
-          <div class="cat-card-badge">Wholesale</div>
-          <div class="cat-card-name">Shrimp Dumplings</div>
-          <div class="cat-card-cn">虾饺</div>
-          <div class="cat-card-desc">Plump whole shrimp filling with bamboo shoots in a delicate translucent skin.</div>
-          <div class="cat-card-meta">
-            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Boil / Steam</span></div>
-            <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
-          </div>
-        </div>
-
-      </div>
+    <!-- ── View Full Catalog Toggle ── -->
+    <div class="catalog-toggle-wrap">
+      <button class="btn-outline" id="catalog-toggle-btn" onclick="toggleCatalog()">View Full Product Catalog &nbsp;↓</button>
     </div>
 
-    <!-- ── Soup Dumplings ── -->
-    <div class="cat-section">
-      <div class="cat-header">
-        <div class="cat-title-group">
-          <div class="cat-title">Soup Dumplings</div>
-          <div class="cat-offer">What We Offer</div>
-        </div>
-        <div class="cat-count">3</div>
-        <div class="cat-line"></div>
-      </div>
-      <div class="cat-grid">
+    <!-- ── Extended Catalog (hidden by default) ── -->
+    <div class="catalog-extended" id="catalog-extended">
 
-        <div class="cat-card">
-          <div class="cat-card-icon"></div>
-          <div class="cat-card-badge">Wholesale</div>
-          <div class="cat-card-name">Pork Xiao Long Bao</div>
-          <div class="cat-card-cn">猪肉小笼包</div>
-          <div class="cat-card-desc">Thin-skinned dumplings with seasoned pork and rich gelatin broth inside.</div>
-          <div class="cat-card-meta">
-            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
-            <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+      <!-- Hospitality & Airline Catering -->
+      <div class="cat-section">
+        <div class="cat-header">
+          <div class="cat-title-group">
+            <div class="cat-title">Hospitality &amp; Airline Catering</div>
+            <div class="cat-offer">Full Range</div>
+          </div>
+          <div class="cat-count">16</div>
+          <div class="cat-line"></div>
+        </div>
+        <div class="cat-grid">
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Scallop Dumpling</div>
+            <div class="cat-card-cn">带子饺</div>
+            <div class="cat-card-desc">Premium scallop filling in a delicate translucent wrapper. Ideal for fine dining and hotel menus.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Vegetable Dim Sum Dumpling</div>
+            <div class="cat-card-cn">素菜饺</div>
+            <div class="cat-card-desc">Mixed vegetable filling in a thin wrapper — suitable for vegetarian menus.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Chicken Wonton</div>
+            <div class="cat-card-cn">鸡肉云吞</div>
+            <div class="cat-card-desc">Light seasoned chicken filling in a thin wonton skin. Great for soups and appetizers.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Boil / Fry</span></div>
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Crystal Spinach Vegetable Dumpling</div>
+            <div class="cat-card-cn">翡翠素饺</div>
+            <div class="cat-card-desc">Vibrant green spinach wrapper with fresh vegetable filling — visually striking for upscale presentations.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Steamed Chinese Taro Bun</div>
+            <div class="cat-card-cn">芋头包</div>
+            <div class="cat-card-desc">Soft bun made with taro dough, lightly sweet with a smooth texture.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Steamed BBQ Pork Bun</div>
+            <div class="cat-card-cn">叉烧包</div>
+            <div class="cat-card-desc">Classic Cantonese bun filled with sweet and savory char siu BBQ pork.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Steamed Chinese Custard Bun</div>
+            <div class="cat-card-cn">奶黄包</div>
+            <div class="cat-card-desc">Fluffy steamed bun filled with a rich, lightly sweet egg custard.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Steamed Chinese Red Bean Bun</div>
+            <div class="cat-card-cn">豆沙包</div>
+            <div class="cat-card-desc">Soft steamed bun with smooth sweet red bean paste filling.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Steamed Mantou Bao</div>
+            <div class="cat-card-cn">馒头</div>
+            <div class="cat-card-desc">Plain fluffy steamed bun — a versatile staple for institutional and airline catering service.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Mini Pork Bun</div>
+            <div class="cat-card-cn">小猪肉包</div>
+            <div class="cat-card-desc">Bite-sized steamed bun with savory pork filling — great for buffets and catering platters.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Curry Chicken Pastry</div>
+            <div class="cat-card-cn">咖喱鸡酥</div>
+            <div class="cat-card-desc">Flaky baked pastry filled with aromatic curry chicken — a crowd favorite for catering events.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Bake / Fry</span></div>
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Pan Fried Radish Cake</div>
+            <div class="cat-card-cn">煎蘿蔔糕</div>
+            <div class="cat-card-desc">Crispy on the outside, soft and savory inside — made with daikon radish and rice flour.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Pan-Fry</span></div>
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Steamed Chicken &amp; Vegetable Bao</div>
+            <div class="cat-card-cn">鸡肉蔬菜包</div>
+            <div class="cat-card-desc">Steamed bun with light chicken and vegetable filling — popular for health-conscious menus.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Pork &amp; Cabbage Gyoza</div>
+            <div class="cat-card-cn">猪肉白菜煎饺</div>
+            <div class="cat-card-desc">Classic pork and cabbage gyoza with a crispy pan-fried bottom and juicy filling.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Pan-Fry</span></div>
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Chicken Flat Dumpling</div>
+            <div class="cat-card-cn">鸡肉扁饺</div>
+            <div class="cat-card-desc">Thin flat-style dumpling with seasoned chicken filling — versatile for soups and stir-fry applications.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Boil / Steam</span></div>
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Pork &amp; Shrimp Wonton</div>
+            <div class="cat-card-cn">猪肉虾云吞</div>
+            <div class="cat-card-desc">Classic wonton with pork and shrimp filling — ideal for soups, noodle dishes, and appetizers.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Boil / Fry</span></div>
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div class="cat-card">
-          <div class="cat-card-icon"></div>
-          <div class="cat-card-badge">Wholesale</div>
-          <div class="cat-card-name">Chicken Xiao Long Bao</div>
-          <div class="cat-card-cn">鸡肉小笼包</div>
-          <div class="cat-card-desc">A lighter soup dumpling with seasoned chicken filling and a clean, savory broth.</div>
-          <div class="cat-card-meta">
-            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
-            <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+      <!-- Prepared Kitchen Products -->
+      <div class="cat-section">
+        <div class="cat-header">
+          <div class="cat-title-group">
+            <div class="cat-title">Prepared Kitchen Products</div>
+            <div class="cat-offer">Ready to Use</div>
+          </div>
+          <div class="cat-count">5</div>
+          <div class="cat-line"></div>
+        </div>
+        <div class="cat-grid">
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Sliced Chicken</div>
+            <div class="cat-card-desc">Pre-sliced cooked chicken — ready for stir-fry, salads, and quick kitchen preparation.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Cooked / Frozen</span></div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Diced Chicken</div>
+            <div class="cat-card-desc">Uniform diced chicken cuts — ideal for institutional kitchens and high-volume cooking.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Cooked / Frozen</span></div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Pork Belly (Cooked)</div>
+            <div class="cat-card-desc">Slow-cooked pork belly, ready to slice and serve or incorporate into dishes.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Cooked / Frozen</span></div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Fried Rice</div>
+            <div class="cat-card-desc">Pre-cooked seasoned fried rice — consistent flavor and texture for restaurant and catering use.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Cooked / Frozen</span></div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Vegetable Lo Mein</div>
+            <div class="cat-card-desc">Pre-cooked lo mein noodles with vegetables — ready to heat and serve for quick kitchen turnaround.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Cooked / Frozen</span></div>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div class="cat-card">
-          <div class="cat-card-icon"></div>
-          <div class="cat-card-badge">Wholesale</div>
-          <div class="cat-card-name">Crab &amp; Pork Soup Dumplings</div>
-          <div class="cat-card-cn">蟹粉小笼包</div>
-          <div class="cat-card-desc">Premium soup dumpling with crab roe and pork filling — our most indulgent offering.</div>
-          <div class="cat-card-meta">
-            <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
-            <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+      <!-- Sauces & Flavor Bases -->
+      <div class="cat-section">
+        <div class="cat-header">
+          <div class="cat-title-group">
+            <div class="cat-title">Sauces &amp; Flavor Bases</div>
+            <div class="cat-offer">Wholesale</div>
+          </div>
+          <div class="cat-count">3</div>
+          <div class="cat-line"></div>
+        </div>
+        <div class="cat-grid">
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Kung Pao Sauce</div>
+            <div class="cat-card-desc">Bold, spicy-sweet sauce with chili, soy, and aromatic peppercorn notes.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Bulk</span></div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Sweet &amp; Sour Sauce</div>
+            <div class="cat-card-desc">Classic balanced sweet and sour sauce for dipping, glazing, and wok cooking.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Bulk</span></div>
+            </div>
+          </div>
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Wholesale</div>
+            <div class="cat-card-name">Teriyaki Sauce</div>
+            <div class="cat-card-desc">Smooth umami-rich teriyaki glaze — versatile for grilling, stir-fry, and plating.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Bulk</span></div>
+            </div>
           </div>
         </div>
+        <p class="cat-note">Additional sauces available upon request.</p>
+      </div>
 
+      <!-- Partner Products -->
+      <div class="cat-section">
+        <div class="cat-header">
+          <div class="cat-title-group">
+            <div class="cat-title">Partner Products</div>
+            <div class="cat-offer">Sourced &amp; Distributed</div>
+          </div>
+          <div class="cat-count">1</div>
+          <div class="cat-line"></div>
+        </div>
+        <div class="cat-grid">
+          <div class="cat-card">
+            <div class="cat-card-icon"></div>
+            <div class="cat-card-badge">Partner</div>
+            <div class="cat-card-name">HK BBQ Chicken Bao</div>
+            <div class="cat-card-cn">港式烧鸡包</div>
+            <div class="cat-card-desc">Hong Kong–style BBQ chicken bao, sourced from our partner manufacturer and distributed through JRC.</div>
+            <div class="cat-card-meta">
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Prep</span><span class="cat-meta-val">Steam</span></div>
+              <div class="cat-meta-item"><span class="cat-meta-lbl">Format</span><span class="cat-meta-val">Frozen</span></div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <!-- ── Bao & Buns ── -->
-    <div class="cat-section">
-      <div class="cat-header">
-        <div class="cat-title-group">
-          <div class="cat-title">Bao &amp; Buns</div>
-          <div class="cat-offer">What We Offer</div>
-        </div>
-        <div class="cat-count">Coming Soon</div>
-        <div class="cat-line"></div>
-      </div>
-      <div class="cat-grid">
-        <div class="cat-card coming-soon">
-          <div class="coming-soon-label">Products Coming Soon</div>
-        </div>
-        <div class="cat-card coming-soon">
-          <div class="coming-soon-label">Products Coming Soon</div>
-        </div>
-        <div class="cat-card coming-soon">
-          <div class="coming-soon-label">Products Coming Soon</div>
-        </div>
-      </div>
-    </div>
+    </div><!-- end catalog-extended -->
 
-    <!-- ── Specialty Items ── -->
-    <div class="cat-section">
-      <div class="cat-header">
-        <div class="cat-title-group">
-          <div class="cat-title">Specialty Items</div>
-          <div class="cat-offer">What We Offer</div>
-        </div>
-        <div class="cat-count">Coming Soon</div>
-        <div class="cat-line"></div>
-      </div>
-      <div class="cat-grid">
-        <div class="cat-card coming-soon">
-          <div class="coming-soon-label">Products Coming Soon</div>
-        </div>
-        <div class="cat-card coming-soon">
-          <div class="coming-soon-label">Products Coming Soon</div>
-        </div>
-        <div class="cat-card coming-soon">
-          <div class="coming-soon-label">Products Coming Soon</div>
-        </div>
-      </div>
+    <!-- CTA -->
+    <div class="products-cta">
+      <p class="products-cta-text">Need our full product catalog or custom manufacturing options? Contact JRC to partner with us.</p>
+      <button class="btn btn-red" onclick="showPage('wholesale')">Contact JRC</button>
     </div>
 
   </div>
@@ -3817,6 +4206,14 @@ function initDragDrop() {
   });
 }
 initDragDrop();
+
+// ── Full catalog toggle ──
+function toggleCatalog() {
+  const panel = document.getElementById('catalog-extended');
+  const btn   = document.getElementById('catalog-toggle-btn');
+  const open  = panel.classList.toggle('visible');
+  btn.textContent = open ? 'Show Less  ↑' : 'View Full Product Catalog  ↓';
+}
 
 // ── Language detection & switching ──
 function detectLanguage() {
