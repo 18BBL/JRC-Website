@@ -3495,10 +3495,54 @@ function showPage(id) {
   requestAnimationFrame(() => requestAnimationFrame(() => target.classList.add('visible')));
 }
 
-function handleSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault();
-  document.getElementById('ws-form').style.display = 'none';
-  document.getElementById('form-success').classList.add('show');
+
+  const btn = e.target.querySelector('button[type="submit"]');
+  const originalText = btn.textContent;
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  const data = {
+    company:  document.getElementById('f-company').value.trim(),
+    contact:  document.getElementById('f-contact').value.trim(),
+    email:    document.getElementById('f-email').value.trim(),
+    phone:    document.getElementById('f-phone').value.trim(),
+    location: document.getElementById('f-location').value.trim(),
+    volume:   document.getElementById('f-volume').value,
+    message:  document.getElementById('f-msg').value.trim(),
+  };
+
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+
+    const json = await res.json();
+
+    if (!res.ok) {
+      throw new Error(json.error || 'Something went wrong.');
+    }
+
+    // Show success state
+    document.getElementById('ws-form').style.display = 'none';
+    document.getElementById('form-success').classList.add('show');
+
+  } catch (err) {
+    btn.textContent = originalText;
+    btn.disabled = false;
+    // Show error inline
+    let errEl = document.getElementById('form-error');
+    if (!errEl) {
+      errEl = document.createElement('p');
+      errEl.id = 'form-error';
+      errEl.style.cssText = 'color:#C0392B;font-family:Crimson Pro,serif;font-size:15px;margin-top:14px;font-style:italic;';
+      btn.parentElement.appendChild(errEl);
+    }
+    errEl.textContent = err.message;
+  }
 }
 
 // ── Show / Hide rest of clients ──
